@@ -1,0 +1,66 @@
+<%- include('assets/navbar') %>
+<%- include('assets/header') %>
+
+
+<div class="row" style="justify-content: center;">
+    <div class="col-sm-6 mt-5" >
+      <h2 style="
+      justify-content: center;
+      background-color: rgb(190, 140, 231);
+      text-align: center;
+      box-shadow: black;
+    ">List Of Student</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Fees</th>
+            <th scope="col">Age</th>
+            <th scope="col">MobNumber</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% data.forEach((item,i)=>{ %>
+          <tr>
+              <td>
+                <%= (i+1) %>
+              </td>
+            <td>
+                <%= item.name %>
+            </td>
+            <td>
+                <%= item.email %>
+            </td>
+            <td>
+                <%= item.fees %>
+            </td>
+            <td>
+                <%= item.age %>
+            </td>
+            <td>
+                <%= item.number %>
+            </td>
+            <td>
+              <a href="/edit/<%=item.id %>">
+                <button>
+                  <i class="fa fa-pen-square text-info"></i>
+                </button></a>
+              <a href="/delete/<%=item.id %>">
+                <button>
+                  <i class="fa fa-trash text-danger"></i>
+                </button>
+                </from>
+            </td>
+          </tr>
+          <% }) %>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<%- include('assets/footer') %>

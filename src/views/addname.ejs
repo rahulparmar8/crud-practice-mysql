@@ -1,0 +1,72 @@
+<%- include('assets/navbar') %> <%- include('assets/header') %>
+
+<div class="row" style="justify-content: center">
+  <div class="col-sm-6 mt-5">
+    <h2
+      style="
+        justify-content: center;
+        background-color: plum;
+        text-align: center;
+        box-shadow: black;
+      "
+    >
+      Add New Student
+    </h2>
+    <form method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="name"
+          class="form-control"
+          id="name"
+          name="name"
+          autocomplete="off"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          name="email"
+          type="email"
+          class="form-control"
+          id="email"
+          autocomplete="off"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="fees" class="form-label">Fees</label>
+        <input
+          name="fees"
+          type="fees"
+          class="form-control"
+          id="fees"
+          autocomplete="off"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input
+          name="age"
+          type="age"
+          class="form-control"
+          id="age"
+          autocomplete="off"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="number" class="form-label">MobNumber</label>
+        <input
+          name="number"
+          type="number"
+          class="form-control"
+          id="number"
+          autocomplete="off"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<%- include('assets/footer') %>

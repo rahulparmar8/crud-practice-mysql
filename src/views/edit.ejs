@@ -1,0 +1,58 @@
+<%- include('assets/navbar') %> <%- include('assets/header') %>
+
+<div class="row" style="justify-content: center">
+  <div class="col-sm-6 mt-5">
+    <h2
+      style="
+        justify-content: center;
+        background-color: plum;
+        text-align: center;
+        box-shadow: black;
+      "
+    >
+      Edit Data
+    </h2>
+    <form method="post" action="/update/<%= data.id %>">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input value="<%= data.name %>" name="name" type="name" class="form-control" id="name" autocomplete="off" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+        value="<%= data.email %>"
+          name="email"
+          type="email"
+          class="form-control"
+          id="email"
+          autocomplete="off"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="fees" class="form-label">Fees</label>
+        <input value="<%= data.fees %>" name="fees" type="fees" class="form-control" id="fees" autocomplete="off" />
+      </div>
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input value="<%= data.age %>" name="age" type="age" class="form-control" id="age" autocomplete="off" />
+      </div>
+      <div class="mb-3">
+        <label for="number" class="form-label">MobNumber</label>
+        <input
+        value="<%= data.number %>"
+        name="number"
+          type="number"
+          class="form-control"
+          id="number"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="btn btn-warning">Update</button>
+    </a>
+      <a href="/addname" class="btn btn-primary">Back to Home</a>
+    </form>
+    </form>
+  </div>
+</div>
+
+<%- include('assets/footer') %>
