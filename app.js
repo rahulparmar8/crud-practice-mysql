@@ -2,8 +2,8 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const web = require("./src/routes/web");
-const fileURLToPath = require("url");
-var userController = require("./src/controllers/user");
+// const fileURLToPath = require("url");
+// var userController = require("./src/controllers/user");
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);

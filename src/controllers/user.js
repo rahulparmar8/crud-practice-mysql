@@ -23,17 +23,10 @@ exports.addUser = async (req, res) => {
       number: number,
     });
     return res.render("addname");
-    console.log(data.dataValues);
-    // let response = {
-    //   data: "ok",
-    // };
-    res.status(200).json(response);
   } catch (error) {
     console.log(error);
   }
 };
-
-// exportas.adduserData a
 
 exports.allList = async (req, res) => {
   try {
@@ -49,12 +42,6 @@ exports.allList = async (req, res) => {
 };
 
 exports.editData = async (req, res) => {
-  // let data = await Users.findByPk(id)
-  // let response = {
-  //   data:data
-  // }
-  // res.render("edit",response)
-
   try {
     await Users.findByPk(req.params.id).then(function (users) {
       console.log(users);
